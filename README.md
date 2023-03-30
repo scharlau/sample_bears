@@ -1,9 +1,8 @@
-# sample_bears
-polar bears on render.com
 
-# This is a short guide to free deployments on http://render.com 
 
-This example focuses on using a Django application in python, so should cover most of the issues you find, even if you're app is done in something else. By following this example you should avoid the 'quick start' documents on Render, which point you down a different path using poetry, which leads you to the paid plans.
+# This is a short guide to free deployments on render
+
+This example focuses on deploying a Django application in python to http://render.com This should cover most of the issues you find, even if you're app is python app is done in something else. By following this example you should avoid the 'quick start' documents on Render, which point you down a different path using poetry, which leads you to the paid plans.
 
 This version uses the sqlite3 database. The postgresql database at render.com is only free for a limited time. That is not covered in this version of the guide.
 
@@ -20,7 +19,7 @@ First, we need to add a webserver for our application as you should not expect t
     
 Gunicorn is a simple server and we don't need to do anything else for now.
 
-Second, we need to add the whitenoise library to our application so that it can serve up any files in our static folder. \
+Second, we need to add the whitenoise library to our application so that it can serve up any files in our static folder. Be sure that your 'static' folder is set up correctly, as detailed here: https://github.com/scharlau/polar_bears_django_visuals After you have that correctly in place then use:
 
     pip install whitenoise
 
@@ -47,9 +46,9 @@ Third, we need to generate a requirements.txt file in order for our application 
  Autodeploy should be 'yes' - although you'll need to keep triggering manual builds until it successfully deploys.
  
  Next, go to the 'environment' menu using the navigation on the left. We need to add some 'environment variables'. Add these ones - all in capitals:
- ALLOWED_HOSTS and put the name of your app along with onreder.com as here: sample-bears.onrender.com
- CSRF_TRUSTED_ORIGINS which is the name you put in the line above with the https:// preceding it, so https://sample-bears.onrender.com
- PYTHON_VERSION where you can put 3.10.7 or whatever you're using.
+ * ALLOWED_HOSTS and put the name of your app along with onreder.com as here: sample-bears.onrender.com
+ * CSRF_TRUSTED_ORIGINS which is the name you put in the line above with the https:// preceding it, so https://sample-bears.onrender.com
+ * PYTHON_VERSION where you can put 3.10.7 or whatever you're using.
  
  That should be everything you need for this part. We now need to return to our application and make a few final changes.
  
