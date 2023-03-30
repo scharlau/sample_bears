@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mysite"
+version = "0.1.0"
+description = "site for polar bears"
+authors = ["Bruce Scharlau <b.scharlau@abdn.ac.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.7"
+whitenoise = {extras = ["brotli"], version = "^6.4.0"}
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
