@@ -29,8 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')if RENDER_EXTERNAL_HOSTNAME:    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-ALLOWED_HOSTS = ['randombasic-alabamanissan-8000.codio-box.uk', 'RENDER_EXTERNAL_HOSTNAME']
-
+ALLOWED_HOSTS = ['randombasic-alabamanissan-8000.codio-box.uk', 'sample-bears.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://randombasic-alabamanissan-8000.codio-box.uk', 'https://sample-bears.onrender.com']
 
 # Application definition
 
