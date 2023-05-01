@@ -8,10 +8,10 @@ This version uses the sqlite3 database. The postgresql database at render.com is
 
 ### Confirm db.sqlite3 is in your repository
 If you are using a .gitignore file to keep extra things out of your repository, as is good practice, then you might find that your db.sqlite3 database is included in the gitignore file. This means, while you have a database locally, you do not have one in your repository. This would also mean, that you'll find the database is missing when you deploy to Render. Use these simple steps to fix this:
-a) comment out the line mentioning db.sqlite3
-b) add the db.sqlite3 file to your repository with the 'git add ' command
-c) make a new commit to your repository
-d) push the commit to GitHub with the git push command
+* comment out the line mentioning db.sqlite3
+*  add the db.sqlite3 file to your repository with the 'git add ' command
+*  make a new commit to your repository
+*  push the commit to GitHub with the git push command
 
 ## Do the setup work
 First, go create an account at Render. If you create an account using your GitHub username/password, then you automatically link that account to render and you can make use of this later.
