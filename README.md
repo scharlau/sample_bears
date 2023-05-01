@@ -1,10 +1,17 @@
 
 
-# This is a short guide to free deployments on render
+# This is a short guide to free Django deployments on Render
 
-This example focuses on deploying a Django application in python to http://render.com This should cover most of the issues you find, even if you're app is python app is done in something else. By following this example you should avoid the 'quick start' documents on Render, which point you down a different path using poetry, which leads you to the paid plans.
+This example focuses on deploying a Django application in python to http://render.com This should cover most of the issues you find, even if your app is done in something else like Flask. By following this example you should avoid the 'quick start' documents on Render, which point you down a different path using poetry, which leads you to the paid plans.
 
-This version uses the sqlite3 database. The postgresql database at render.com is only free for a limited time. That is not covered in this version of the guide.
+This version uses the sqlite3 database. The postgresql database at render.com is only free for a limited time. That is not covered in this version of the guide. 
+
+### Confirm db.sqlite3 is in your repository
+If you are using a .gitignore file to keep extra things out of your repository, as is good practice, then you might find that your db.sqlite3 database is included in the gitignore file. This means, while you have a database locally, you do not have one in your repository. This would also mean, that you'll find the database is missing when you deploy to Render. Use these simple steps to fix this:
+a) comment out the line mentioning db.sqlite3
+b) add the db.sqlite3 file to your repository with the 'git add ' command
+c) make a new commit to your repository
+d) push the commit to GitHub with the git push command
 
 ## Do the setup work
 First, go create an account at Render. If you create an account using your GitHub username/password, then you automatically link that account to render and you can make use of this later.
